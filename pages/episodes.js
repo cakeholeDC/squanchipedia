@@ -1,40 +1,39 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Character from '../components/Character'
-import CardDeck from 'react-bootstrap/CardDeck'
+import Episode from '../components/Episode'
 
 
-export default class Characters extends React.Component {
+export default class Episodes extends React.Component {
     state = {
         info: null,
-        characters: null,
+        episodes: null,
         page: 1,
     }
 
     componentDidMount(){
         console.log("ComponentDidMount")
-        this.fetchCharacters()
+        this.fetchEpisodes()
     }
 
-    fetchCharacters = () => {
-        fetch("https://rickandmortyapi.com/api/character")
+    fetchEpisodes = () => {
+        fetch("https://rickandmortyapi.com/api/episode")
             .then(res => res.json())
             .then(json => {
+                debugger
                 this.setState({
                     info: json.info,
-                    characters: json.results
+                    episodes: json.results
                 })
             })
     }
 
     render() {
+        console.log(this.state)
         return (
             <Layout>
                 <h1>Characters</h1>
                 <ul>
-                {/* <CardDeck> */}
-                    { this.state.characters ? this.state.characters.map(char => <Character {...char}/>) : null }
-                {/* </CardDeck> */}
+                    { this.state.episodes ? this.state.episodes.map(char => <Episode {...char}/>) : null }
                 </ul>
             </Layout>
         )

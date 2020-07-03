@@ -1,5 +1,6 @@
 import styles from './layout.module.css'
 import Header from './Header'
+import Container from 'react-bootstrap/Container'
 
 // function Layout({ children }) {
 //     return <div className={ styles.container}>{children}</div>
@@ -8,12 +9,14 @@ import Header from './Header'
 // export default Layout
   
 const Layout = (props) => (
-    <div className="app-body">
-        <Header />
-        <div className="content">
+    <>
+    <Header />
+    <Container fluid className="app-body">
+        <div className="app-content">
             { props.children }
         </div>
-    </div>
+    </Container>
+    </>
 )
 
 export default Layout

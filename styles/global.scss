@@ -12,7 +12,8 @@ body {
 //     box-sizing: border-box;
 // }
 .app-body {
-    background: url(https://i.pinimg.com/originals/88/00/bb/8800bb0722a6141fcdcd3c3f34fe1002.jpg);
+    background-color: lightgray;
+    // background: url(https://i.pinimg.com/originals/88/00/bb/8800bb0722a6141fcdcd3c3f34fe1002.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -50,15 +51,19 @@ body {
     }
 }
 
-.content {
+.app-content {
     width: 80%;
-    height: 80vh;
+    // height: 80vh;
     margin: auto;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    background-color: rgba(255, 255, 255, .7);
-    border-radius: 25px;
+    // text-align: center;
+    // padding: 2rem;
+    // margin-top: 2rem;
+    // background-color: rgba(255, 255, 255, .7);
+    // border-radius: 25px;
+}
+
+.ui.card.character-card {
+    text-align: left;
 }
 
 

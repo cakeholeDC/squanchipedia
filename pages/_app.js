@@ -1,5 +1,5 @@
 import '../styles/global.scss'
-import 'semantic-ui-css/semantic.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "next/app";
 import Head from 'next/head'
 
