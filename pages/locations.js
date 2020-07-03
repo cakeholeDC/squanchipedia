@@ -30,7 +30,7 @@ export default class Locations extends React.Component {
         console.log(this.state)
         return (
             <Layout>
-                <h1>Characters</h1>
+                <h1>Locations</h1>
                 <ul>
                     { this.state.locations ? this.state.locations.map(char => <Location {...char}/>) : null }
                 </ul>

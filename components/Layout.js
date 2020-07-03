@@ -1,5 +1,5 @@
 import styles from './layout.module.css'
-import Header from './Header'
+import Navbar from './Navbar'
 import Container from 'react-bootstrap/Container'
 
 // function Layout({ children }) {
@@ -10,7 +10,7 @@ import Container from 'react-bootstrap/Container'
   
 const Layout = (props) => (
     <>
-    <Header />
+    <Navbar />
     <Container fluid className="app-body">
         <div className="app-content">
             { props.children }

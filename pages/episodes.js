@@ -19,7 +19,6 @@ export default class Episodes extends React.Component {
         fetch("https://rickandmortyapi.com/api/episode")
             .then(res => res.json())
             .then(json => {
-                debugger
                 this.setState({
                     info: json.info,
                     episodes: json.results
@@ -31,7 +30,7 @@ export default class Episodes extends React.Component {
         console.log(this.state)
         return (
             <Layout>
-                <h1>Characters</h1>
+                <h1>Episodes</h1>
                 <ul>
                     { this.state.episodes ? this.state.episodes.map(char => <Episode {...char}/>) : null }
                 </ul>
